@@ -13,18 +13,6 @@ import java.io.File;
 public class Ex8 {
 
     public static void main(String[] args) {
-        File myObj = new File("test");
-        if (myObj.mkdir()) {
-            System.out.println("Created the folder: " + myObj.getName());
-        } 
-        else {
-            System.out.println("Failed to create the folder.");
-        }
-        if (myObj.delete()) {
-            System.out.println("Deleted the folder: " + myObj.getName());
-        } 
-        else {
-            System.out.println("Failed to delete the folder.");
-        }
+        // TODO add your code here
     }
 }
