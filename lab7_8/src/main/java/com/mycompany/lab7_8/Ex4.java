@@ -14,6 +14,15 @@ import java.io.IOException;  // Import the IOException class to handle errors
 public class Ex4 {
 
     public static void main(String[] args) {
-        // TODO add the code here
+        try {
+            FileWriter myWriter = new FileWriter("Test.txt");
+            myWriter.write("Files in Java might be tricky, but it is fun enough!");
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+        } 
+        catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
     }
 }

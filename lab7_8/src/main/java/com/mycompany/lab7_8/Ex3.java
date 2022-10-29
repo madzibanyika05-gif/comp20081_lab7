@@ -13,12 +13,22 @@ import java.io.IOException;
 
 /**
  *  *
- *  * @author ntu-user
- 
+ *  * @author ntu-user  
  */
 public class Ex3 {
 
     public static void main(String[] args) {
-        //TODO add the code here 
+        try {
+            File myObj = new File("Test.txt");
+            if (myObj.createNewFile()) {
+                System.out.println("File created: " + myObj.getName());
+            } else {
+                System.out.println("File already exists.");
+            }
+        } 
+        catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
     }
 }
