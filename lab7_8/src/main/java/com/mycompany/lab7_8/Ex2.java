@@ -16,24 +16,17 @@ public class Ex2 {
 
     public static void main(String[] args) {
         FileReader fileReader;
-        try {
-            fileReader = new FileReader("Test.txt");
-            var bufferReader = new BufferedReader(fileReader);
+        fileReader = new FileReader("Test.txt");
+        var bufferReader = new BufferedReader(fileReader);
 
-            String fileData = null;
+        String fileData = null;
 
-            while ((fileData = bufferReader.readLine()) != null) {
-                System.out.println(fileData);
-            }
-            // closing the BufferedReader object  
-            bufferReader.close();
-        } 
-        catch (FileNotFoundException ex) {
-            Logger.getLogger(Ex2.class.getName()).log(Level.SEVERE, null, ex);
-        } 
-        catch (IOException ex) {
-            Logger.getLogger(Ex2.class.getName()).log(Level.SEVERE, null, ex);
+        while ((fileData = bufferReader.readLine()) != null) {
+            System.out.println(fileData);
         }
+        // closing the BufferedReader object  
+        bufferReader.close();
+        
 
     }
 }
